@@ -21,10 +21,16 @@ public class BulletController : MonoBehaviour
             Destroy (gameObject);
         }
     }
+
     void OnTriggerEnter2D(Collider2D coll)
     {
-        Instantiate(explosionPrefab,transform.position,Quaternion.identity);
-        Destroy(coll.gameObject);
-        Destroy(gameObject);
+        if(coll.CompareTag("Stone"))
+        {
+            GameObject.Find("Canvas").GetComponent<UIController>().AddScore();
+            Instantiate(explosionPrefab,transform.position,Quaternion.identity);
+            Destroy(coll.gameObject);
+            Destroy(gameObject);
+            // Destroy(BulletController.explosionPrefab);
+        }
     }
 }

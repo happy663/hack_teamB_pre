@@ -8,7 +8,7 @@ public class RockController : MonoBehaviour
     float rotSpeed;
 
     void Start () {
-        this.fallSpeed = 0.01f + 0.1f * Random.value;
+        this.fallSpeed = 0.03f + 0.05f * Random.value;
         this.rotSpeed = 5f + 3f * Random.value;
     }
 
@@ -19,6 +19,17 @@ public class RockController : MonoBehaviour
 
         if(transform.position.y < -5.5)
         {
+            GameObject.Find("Canvas").GetComponent<UIController>().GameOver();
+            Destroy(gameObject);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D coll)
+    {
+        if(coll.CompareTag("Player"))
+        {
+            GameObject.Find("Canvas").GetComponent<UIController>().GameOver();
+            Destroy(coll.gameObject);
             Destroy(gameObject);
         }
     }
