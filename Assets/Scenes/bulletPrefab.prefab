@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7836157607124418845}
   - component: {fileID: 7836157607124418846}
-  - component: {fileID: -7667226024992661325}
+  - component: {fileID: -1430332876200030177}
   - component: {fileID: 7678320886487744581}
   - component: {fileID: -60997834086879733}
   m_Layer: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-7667226024992661325
+--- !u!114 &-1430332876200030177
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2efbffbd118624c80a699886e77ddedb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 100000, guid: 4c5a17ca1f9fec84e941441ebb8be079, type: 3}
 --- !u!58 &7678320886487744581
 CircleCollider2D:
   m_ObjectHideFlags: 0
