@@ -21,6 +21,5 @@ public class RockController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
     }
 }

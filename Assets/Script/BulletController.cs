@@ -17,6 +17,7 @@ public class BulletController : MonoBehaviour
 
         if (transform.position.y > 5) {
             Destroy (gameObject);
+            
         }
     }
 }
