@@ -5,14 +5,18 @@ using UnityEngine;
 public class BackgroundController : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
+    // void Start()
+    // {
         
-    }
+    // }
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(0,-0.03f,0);
+        if(transform.position.y < -4.9)
+        {
+            transform.position = new Vector3(0,4.9f,0);
+        }
     }
 }

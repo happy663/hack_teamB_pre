@@ -7,12 +7,16 @@ public class UIController : MonoBehaviour
 {
     // Start is called before the first frame update
     
-     int score = 0;
-     GameObject scoreText;
-     GameObject gameOverText;
+    int score = 0;
+    GameObject scoreText;
+    GameObject gameOverText;
 
-     public void GameOver(){
+    public GameObject rockPrefab;
+
+    public void GameOver(){
         this.gameOverText.GetComponent<Text>().text = "GameOver";
+        GameObject.Find("Director").GetComponent<RockGenerator>().Stop();
+
     }
 
     public void AddScore(){

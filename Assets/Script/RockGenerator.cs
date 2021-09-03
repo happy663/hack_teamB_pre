@@ -12,11 +12,10 @@ public class RockGenerator : MonoBehaviour
         InvokeRepeating("GenRock",1,1);
     }
 
-    // Update is called once per frame
-    // void Update()
-    // {
-        
-    // }
+    public void Stop(){
+        CancelInvoke();
+        // ジェネレーターを止める
+    }
 
     void GenRock()
     {
